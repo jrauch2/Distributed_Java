@@ -15,19 +15,19 @@
 </head>
 <body>
 <nav>
-    <div class="nav"><a href="tempIndex.html">Home</a></div>
-    <div class="nav"><a href="tempProducts.html">Products</a></div>
+    <div class="nav"><a href="index.jsp">Home</a></div>
+    <div class="nav"><a href="products.jsp">Products</a></div>
     <div id="navHeader">Byron Supply Company</div>
     <div id="navHeaderSmall">BSC</div>
-    <div class="nav"><a href="tempCart.html">Cart</a></div>
-    <div class="nav"><a href="tempAccount.html">Account</a></div>
+    <div class="nav"><a href="cart.jsp">Cart</a></div>
+    <div class="nav"><a href="account.jsp">Account</a></div>
 </nav>
 <div id="dummyNav"></div>
 <div id="welcomeBannerBackground">
     <div id="welcomeBanner">
-        <div class="nav"><a href="tempLogin.html">Login</a></div>
+        <div class="nav"><a href="login.jsp">Login</a></div>
         <div>|</div>
-        <div class ="nav"><a href="tempRegister.html">Register</a></div>
+        <div class ="nav"><a href="register.jsp">Register</a></div>
     </div>
 </div>
 
