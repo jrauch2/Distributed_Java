@@ -11,28 +11,31 @@
   <meta charset="utf-8">
   <title>Byron Supply Company</title>
   <link href="./css/byron_supply_company.css" rel="stylesheet">
+  <link href="./css/index.css" rel="stylesheet">
 </head>
 <body>
-<nav>
-  <div class="nav"><a href="index.jsp">Home</a></div>
-  <div class="nav"><a href="products.jsp">Products</a></div>
-  <div id="navHeader">Byron Supply Company</div>
-  <div id="navHeaderSmall">BSC</div>
-  <div class="nav"><a href="cart.jsp">Cart</a></div>
-  <div class="nav"><a href="account.jsp">Account</a></div>
-</nav>
-<div id="welcomeBanner">Welcome Back, User!</div>
+    <nav>
+      <div class="nav"><a href="index.jsp">Home</a></div>
+      <div class="nav"><a href="products.jsp">Products</a></div>
+      <div id="navHeader">Byron Supply Company</div>
+      <div id="navHeaderSmall">BSC</div>
+      <div class="nav"><a href="cart.jsp">Cart</a></div>
+      <div class="nav"><a href="account.jsp">Account</a></div>
+    </nav>
+    <div id="welcomeBanner"><a href="login.jsp">Login</a> | <a href="register.jsp">Register</a></div>
 
-<div id="slides">
-  <img src="./images/rattan-outdoor-furniture-bangkok.jpg">
-  <img src="./images/furniture-str-LR-wide-201706.jpg">
-  <img src="./images/10-best-kitchen-supplies-amazing-kitchen-supplies-.jpg">
-</div>
+    <div id="slides">
+      banner image goes here.
+    </div>
+    <div>
+        <p>Welcome to Byron Supply Company, where you can find all of your stylish, household needs.</p>
+    </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="./js/jquery.slides.min.js"></script>
 <script src="./js/index.js"></script>
 </body>
 <footer>
+    Byron Supply Company<br>
+    Waukesha, WI<br>
 </footer>
 </html>
