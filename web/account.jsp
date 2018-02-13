@@ -2,6 +2,14 @@
   Created by IntelliJ IDEA.
   User: jmbra
   Date: 2/13/2018
+  Time: 4:13 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: jmbra
+  Date: 2/13/2018
   Time: 2:41 PM
   To change this template use File | Settings | File Templates.
 --%>
@@ -35,8 +43,7 @@
     <div id="centerPanel"></div>
     <div id="rightPanel"></div>
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="./js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"/>
 </body>
 <footer>
     Byron Supply Company<br>
