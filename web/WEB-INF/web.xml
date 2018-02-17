@@ -5,7 +5,7 @@
          version="3.1">
     <servlet>
         <servlet-name>Servlet</servlet-name>
-        <servlet-class>edu.wctc.jrauch2.distributedjava.Servlet</servlet-class>
+        <servlet-class>edu.wctc.jrauch2.distributedjava.controller.ProductController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Servlet</servlet-name>
