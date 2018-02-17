@@ -1,15 +1,18 @@
-package edu.wctc.jrauch2.distributedjava;
+package edu.wctc.jrauch2.distributedjava.controller;
+
+import edu.wctc.jrauch2.distributedjava.model.ProductService;
 
 import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 
-@javax.servlet.annotation.WebServlet(name = "Servlet")
-public class Servlet extends javax.servlet.http.HttpServlet {
+@javax.servlet.annotation.WebServlet(name = "ProductController")
+public class ProductController extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
 
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+        ProductService productService = new ProductService();
         RequestDispatcher dispatcher = null;
 
         dispatcher = request.getRequestDispatcher("/index.jsp");
