@@ -128,19 +128,19 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../edu/wctc/jrauch2/distributedjava/model/Product.html#Product-int-java.lang.String-double-double-">Product</a></span>(int&nbsp;itemNumber,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../edu/wctc/jrauch2/distributedjava/model/Product.html#Product-int-java.lang.String-double-double-">Product</a></span>(int&nbsp;productID,
        java.lang.String&nbsp;name,
        double&nbsp;cost,
        double&nbsp;retail)</code>
-<div class="block">Constructor including minimum parameter of "itemNumber", "name", "cost", and "retail".</div>
+<div class="block">Constructor including minimum parameter of "productID", "name", "cost", and "retail".</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../edu/wctc/jrauch2/distributedjava/model/Product.html#Product-int-java.lang.String-java.lang.String-java.lang.String-java.lang.String:A-double-double-int-int-int-boolean-boolean-">Product</a></span>(int&nbsp;itemNumber,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../edu/wctc/jrauch2/distributedjava/model/Product.html#Product-int-java.lang.String-java.lang.String-java.lang.String-java.lang.String:A-double-double-int-int-int-boolean-boolean-">Product</a></span>(int&nbsp;productID,
        java.lang.String&nbsp;name,
        java.lang.String&nbsp;shortDescription,
        java.lang.String&nbsp;longDescription,
-       java.lang.String[]&nbsp;images,
+       java.lang.String[]&nbsp;image,
        double&nbsp;cost,
        double&nbsp;retail,
        int&nbsp;discount,
@@ -187,13 +187,13 @@ extends java.lang.Object</pre>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/wctc/jrauch2/distributedjava/model/Product.html#getImages--">getImages</a></span>()</code>
-<div class="block">Getter for "images".</div>
+<div class="block">Getter for "image".</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/wctc/jrauch2/distributedjava/model/Product.html#getItemNumber--">getItemNumber</a></span>()</code>
-<div class="block">Getter for "itemNumber".</div>
+<div class="block">Getter for "productID".</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -264,8 +264,8 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/wctc/jrauch2/distributedjava/model/Product.html#setImages-java.lang.String:A-">setImages</a></span>(java.lang.String[]&nbsp;images)</code>
-<div class="block">Setter for "images".</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../edu/wctc/jrauch2/distributedjava/model/Product.html#setImages-java.lang.String:A-">setImages</a></span>(java.lang.String[]&nbsp;image)</code>
+<div class="block">Setter for "image".</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -338,11 +338,11 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>Product</h4>
-<pre>public&nbsp;Product(int&nbsp;itemNumber,
+<pre>public&nbsp;Product(int&nbsp;productID,
                java.lang.String&nbsp;name,
                java.lang.String&nbsp;shortDescription,
                java.lang.String&nbsp;longDescription,
-               java.lang.String[]&nbsp;images,
+               java.lang.String[]&nbsp;image,
                double&nbsp;cost,
                double&nbsp;retail,
                int&nbsp;discount,
@@ -354,11 +354,11 @@ extends java.lang.Object</pre>
 <div class="block">Constructor including all parameters.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>itemNumber</code> - The item number of the product.</dd>
+<dd><code>productID</code> - The item number of the product.</dd>
 <dd><code>name</code> - The name of the product.</dd>
 <dd><code>shortDescription</code> - A short description of the product for the "Product" page.</dd>
 <dd><code>longDescription</code> - A long description of the product for the "Product Details" page.</dd>
-<dd><code>images</code> - A String array containing urls of images for the product.</dd>
+<dd><code>image</code> - A String array containing urls of image for the product.</dd>
 <dd><code>cost</code> - The cost of the product to the retailer, including packaging and labor, not including retail markup.</dd>
 <dd><code>retail</code> - The retail price of the product, cost + markup.</dd>
 <dd><code>discount</code> - The discount on the product as an integer, between 0 and 100.</dd>
@@ -377,15 +377,15 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>Product</h4>
-<pre>public&nbsp;Product(int&nbsp;itemNumber,
+<pre>public&nbsp;Product(int&nbsp;productID,
                java.lang.String&nbsp;name,
                double&nbsp;cost,
                double&nbsp;retail)
         throws java.lang.Exception</pre>
-<div class="block">Constructor including minimum parameter of "itemNumber", "name", "cost", and "retail". The remaining parameters are set to default values to avoid null values.</div>
+<div class="block">Constructor including minimum parameter of "productID", "name", "cost", and "retail". The remaining parameters are set to default values to avoid null values.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>itemNumber</code> - The item number of the product.</dd>
+<dd><code>productID</code> - The item number of the product.</dd>
 <dd><code>name</code> - The name of the product.</dd>
 <dd><code>cost</code> - The cost of the product to the retailer, including packaging and labor, not including retail markup.</dd>
 <dd><code>retail</code> - The retail price of the product, cost + markup.</dd>
@@ -409,7 +409,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getItemNumber</h4>
 <pre>public&nbsp;int&nbsp;getItemNumber()</pre>
-<div class="block">Getter for "itemNumber".</div>
+<div class="block">Getter for "productID".</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the item number of the product.</dd>
@@ -507,10 +507,10 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getImages</h4>
 <pre>public&nbsp;java.lang.String[]&nbsp;getImages()</pre>
-<div class="block">Getter for "images".</div>
+<div class="block">Getter for "image".</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a string array containing the location of images for the product.</dd>
+<dd>a string array containing the location of image for the product.</dd>
 </dl>
 </li>
 </ul>
@@ -520,11 +520,11 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setImages</h4>
-<pre>public&nbsp;void&nbsp;setImages(java.lang.String[]&nbsp;images)</pre>
-<div class="block">Setter for "images".</div>
+<pre>public&nbsp;void&nbsp;setImages(java.lang.String[]&nbsp;image)</pre>
+<div class="block">Setter for "image".</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>images</code> - A string array containing the location of images for the product.</dd>
+<dd><code>image</code> - A string array containing the location of image for the product.</dd>
 </dl>
 </li>
 </ul>
