@@ -13,7 +13,19 @@ public class ProductController extends javax.servlet.http.HttpServlet {
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         ProductService productService = new ProductService();
-        RequestDispatcher dispatcher = null;
+        RequestDispatcher dispatcher;
+
+        String productID = request.getParameter("productID");
+
+        if (productID != null) {
+            request.setAttribute("product", productService.getProduct("productID"));
+            dispatcher = request.getRequestDispatcher("/WEB-INF/productDetails.jsp");
+        } else {
+            request.setAttribute("productList", productService.getProductList());
+            dispatcher = request.getRequestDispatcher("/WEB-INF/products.jsp");
+        }
+        dispatcher.forward(request, response);
+
 
         dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
