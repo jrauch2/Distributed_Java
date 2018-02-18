@@ -16,18 +16,18 @@
 <body>
 <nav>
     <div class="nav"><a href="index.jsp">Home</a></div>
-    <div class="nav"><a href="products.jsp">Products</a></div>
+    <div class="nav"><a href="/Distributed_Java_war_exploded/ProductController">Products</a></div>
     <div id="navHeader">Byron Supply Company</div>
     <div id="navHeaderSmall">BSC</div>
-    <div class="nav"><a href="cart.jsp">Cart</a></div>
-    <div class="nav"><a href="account.jsp">Account</a></div>
+    <div class="nav"><a href="WEB-INF/cart.jsp">Cart</a></div>
+    <div class="nav"><a href="WEB-INF/account.jsp">Account</a></div>
 </nav>
 <div id="dummyNav"></div>
 <div id="welcomeBannerBackground">
     <div id="welcomeBanner">
-        <div class="nav"><a href="login.jsp">Login</a></div>
+        <div class="nav"><a href="WEB-INF/login.jsp">Login</a></div>
         <div>|</div>
-        <div class ="nav"><a href="register.jsp">Register</a></div>
+        <div class ="nav"><a href="WEB-INF/register.jsp">Register</a></div>
     </div>
 </div>
 
@@ -39,7 +39,7 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="./js/index.js"></script>
+<script src="WEB-INF/js"></script>
 </body>
 <footer>
     Byron Supply Company<br>
