@@ -1,11 +1,11 @@
 package edu.wctc.jrauch2.distributedjava.model;
 
 public class Product {
-    private int itemNumber;
+    private String productID;
     private String name;
     private String shortDescription;
     private String longDescription;
-    private String[] images;
+    private String image;
     private double cost;
     private double retail;
     private int discount;
@@ -16,11 +16,11 @@ public class Product {
 
     /**
      * Constructor including all parameters.
-     * @param itemNumber The item number of the product.
+     * @param productID The item number of the product.
      * @param name The name of the product.
      * @param shortDescription A short description of the product for the "Product" page.
      * @param longDescription A long description of the product for the "Product Details" page.
-     * @param images A String array containing urls of images for the product.
+     * @param image A String array containing urls of image for the product.
      * @param cost The cost of the product to the retailer, including packaging and labor, not including retail markup.
      * @param retail The retail price of the product, cost + markup.
      * @param discount The discount on the product as an integer, between 0 and 100.
@@ -29,12 +29,12 @@ public class Product {
      * @param discontinued Is the product discontinued?
      * @param sale Is the product on sale?
      */
-    public Product(int itemNumber, String name, String shortDescription, String longDescription, String[] images, double cost, double retail, int discount, int quantityOnHand, int quantityOnOrder, boolean discontinued, boolean sale) throws Exception{
-        setItemNumber(itemNumber);
+    public Product(String productID, String name, String shortDescription, String longDescription, String image, double cost, double retail, int discount, int quantityOnHand, int quantityOnOrder, boolean discontinued, boolean sale) throws Exception{
+        setProductID(productID);
         this.name = name;
         this.shortDescription = shortDescription;
         this.longDescription = longDescription;
-        this.images = images;
+        this.image = image;
         this.cost = cost;
         this.retail = retail;
         setDiscount(discount);
@@ -45,21 +45,21 @@ public class Product {
     }
 
     /**
-     * Constructor including minimum parameter of "itemNumber", "name", "cost", and "retail". The remaining parameters are set to default values to avoid null values.
-     * @param itemNumber The item number of the product.
+     * Constructor including minimum parameter of "productID", "name", "cost", and "retail". The remaining parameters are set to default values to avoid null values.
+     * @param productID The item number of the product.
      * @param name The name of the product.
      * @param cost The cost of the product to the retailer, including packaging and labor, not including retail markup.
      * @param retail The retail price of the product, cost + markup.
      */
-    public Product(int itemNumber, String name, double cost, double retail) throws Exception {
-        setItemNumber(itemNumber);
+    public Product(String productID, String name, double cost, double retail) {
+        this.productID = productID;
         this.name = name;
         this.cost = cost;
         this.retail = retail;
         discount = 0;
         shortDescription = "";
         longDescription = "";
-        images = new String[]{""};
+        image = "";
         quantityOnHand = 0;
         quantityOnOrder = 0;
         discontinued = false;
@@ -67,23 +67,19 @@ public class Product {
     }
 
     /**
-     * Getter for "itemNumber".
-     * @return the item number of the product.
+     * Getter for "productID".
+     * @return the product ID.
      */
-    public int getItemNumber() {
-        return itemNumber;
+    public String getProductID() {
+        return productID;
     }
 
     /**
-     * Private setter for "itemNumber" for the constructor to verify that the item number is valid.
-     * @param itemNumber The item number of the product.
+     * Setter for "productID".
+     * @param productID The product ID.
      */
-    private void setItemNumber(int itemNumber) throws Exception{
-        if (itemNumber > 0) {
-            this.itemNumber = itemNumber;
-        } else {
-            throw new Exception("Invalid item number");
-        }
+    public void setProductID(String productID) {
+        this.productID = productID;
     }
 
     /**
@@ -135,19 +131,19 @@ public class Product {
     }
 
     /**
-     * Getter for "images".
-     * @return a string array containing the location of images for the product.
+     * Getter for "image".
+     * @return a string containing the location of an image for the product.
      */
-    public String[] getImages() {
-        return images;
+    public String getImage() {
+        return image;
     }
 
     /**
-     * Setter for "images".
-     * @param images A string array containing the location of images for the product.
+     * Setter for "image".
+     * @param image A string containing the location of an image for the product.
      */
-    public void setImages(String[] images) {
-        this.images = images;
+    public void setImage(String image) {
+        this.image = image;
     }
 
     /**
