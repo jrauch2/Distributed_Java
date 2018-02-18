@@ -6,6 +6,11 @@
 .imgFrame {
     border: solid white;
     margin: 2px;
+    height: 150px;
+}
+
+img {
+    height: 100%;
 }
 
 .product {
