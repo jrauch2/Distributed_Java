@@ -1,0 +1,7 @@
+.imgFrame {
+    width: 50%;
+}
+
+.imgFrame > img {
+    width: 100%;
+}

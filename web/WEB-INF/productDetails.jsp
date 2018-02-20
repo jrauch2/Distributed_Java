@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -16,7 +18,7 @@
 <body>
 <nav>
     <div class="nav"><a href="index.jsp">Home</a></div>
-    <div class="nav"><a href="products.jsp">Products</a></div>
+    <div class="nav"><a href="/Distributed_Java_war_exploded/ProductController">Products</a></div>
     <div id="navHeader">Byron Supply Company</div>
     <div id="navHeaderSmall">BSC</div>
     <div class="nav"><a href="cart.jsp">Cart</a></div>
@@ -32,7 +34,13 @@
 </div>
 <div id="pageLayout">
     <div id="leftPanel"></div>
-    <div id="centerPanel"></div>
+    <div id="centerPanel">
+        <div class="product">
+            <div class="imgFrame"><img src="<c:out value="${product.image}"/>"></div>
+            <span class="productName"><c:out value="${product.name}"/></span><br>
+            <span class="longDescription"><c:out value="${product.longDescription}"/></span>
+        </div>
+    </div>
     <div id="rightPanel"></div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
