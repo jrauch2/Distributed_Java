@@ -1,21 +1,14 @@
-100001,Peeler,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100002,Knive,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100003,Ladle,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100004,Slotted Spoon,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100005,Wooden Sppon,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100006,Butcher Knife,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100007,Spatula,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100008,Scraper,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100009,Metal Bowl,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100010,Skillet,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100011,Frying Pan,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100012,Dutch Oven,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100013,Glass Baking Dish,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100014,Glass Storage Container,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100015,Metal Measuring Cups,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100016,Dia de los Muertos Measuring Spoons,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100017,Knive Sharpening Rod,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100018,Kitchen Sheers,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100019,Meat Thermometer,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100020,Kitchen Scale,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
-100021,Glass Pitcher with Ornate Handle,A short description.,A lond description.,./image/Image-Coming-Soon-Placeholder.png,1,2,0,10,0,FALSE,FALSE
+100001|Peeler|A peeler.|A peeler featuring an ergonomic handle, perfect for peeling potatoes, apples, and all of your peeling needs.|./image/peeler.png|1|2|0|10|0|FALSE|FALSE
+100002|Can Opener|Stainless steel can opener.|A standard, stainless steel can opener.|./image/canOpener.png|1|2|0|10|0|FALSE|FALSE
+100003|Spoon Rest|Decorative spoon rest.|A decorative spoon rest, designed to look like a sugar skull for Dia de los Muertos.|./image/sugarSkullSpoonRest.png|1|2|0|10|0|FALSE|FALSE
+100004|Straining Spoon|A wooden straining spoon.|A wooden straining spoon, featuring holes to easily drain away liquid and scoop out your food.|./image/woodenStrainingSpoon.png|1|2|0|10|0|FALSE|FALSE
+100005|Spoon|A wooden spoon.|A wooden spoon.|./image/woodenSpoon.png|1|2|0|10|0|FALSE|FALSE
+100006|Tongs|Ergonomic tongs.|Tongs, featuring an ergonomic handle and locking mechanism to allow for easy storage.|./image/tongs.png|1|2|0|10|0|FALSE|FALSE
+100007|Spatula|A wooden spatula.|A wooden spatula.|./image/woodenSpatula.png|1|2|0|10|0|FALSE|FALSE
+100008|Masher|A masher.|A masher, featuing an ergonomic handle. Perfect for mashing potatoes, sweet potatoes, and all of your mashing needs.|./image/masher.png|1|2|0|10|0|FALSE|FALSE
+100009|Measuring Cups|A set of metal measuring cups.|A set of meta measuring cups, including: 1 cup, 1/2 cup, 1/3 cup, and 1/4 cup.|./image/measuringCups.png|1|2|0|10|0|FALSE|FALSE
+100010|Measuring Spoons|Decorative measuring spoons.|Decorative measuring spoons, designed to look like sugar skulls for Dia de los Muertos.|./image/sugarSkullMeasuringSpoons.png|1|2|0|10|0|FALSE|FALSE
+100011|Cutter|A round cutter.|A round cutter, perfect for cutting pizza, dough, and all of your cutting needs.|./image/pizzaCutter.png|1|2|0|10|0|FALSE|FALSE
+100012|Glass pitcher.|A glass pitcher with ornate handle.|A glass pitcher with beautiful, ornate, antique-looking handle.|./image/pitcher.png|1|2|0|10|0|FALSE|FALSE
+100013|Wooden Set|A wooden spoon set.|A set of wooden utensils including: 1 spatula, 1 straining spoon, and 1 spoon.|./image/woodenSpoonSet.png|1|2|0|10|0|FALSE|FALSE
+100014|Whisk set|A set of metal whisks.|A set of metal whisks, size large and small.|./image/whisks.png|1|2|0|10|0|FALSE|FALSE
