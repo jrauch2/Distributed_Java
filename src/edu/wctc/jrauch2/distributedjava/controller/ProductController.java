@@ -18,16 +18,12 @@ public class ProductController extends javax.servlet.http.HttpServlet {
         String productID = request.getParameter("productID");
 
         if (productID != null) {
-            request.setAttribute("product", productService.getProduct("productID"));
+            request.setAttribute("product", productService.getProduct(productID));
             dispatcher = request.getRequestDispatcher("/WEB-INF/productDetails.jsp");
         } else {
             request.setAttribute("productList", productService.getProductList());
             dispatcher = request.getRequestDispatcher("/WEB-INF/products.jsp");
         }
-        dispatcher.forward(request, response);
-
-
-        dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
     }
 }
