@@ -13,7 +13,7 @@ public class ProductService {
 
     public ProductService() {
         while ((line = products.fileReadLine()) != null) {
-            productAsArray = line.split(",");
+            productAsArray = line.split("\\|");
             try {
                 productList.add(new Product(productAsArray[0], productAsArray[1], productAsArray[2], productAsArray[3], productAsArray[4], Double.parseDouble(productAsArray[5]), Double.parseDouble(productAsArray[6]), Integer.parseInt(productAsArray[7]), Integer.parseInt(productAsArray[8]), Integer.parseInt(productAsArray[9]), Boolean.parseBoolean(productAsArray[10]), Boolean.parseBoolean(productAsArray[11])));
             } catch (Exception e) {
