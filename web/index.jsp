@@ -31,8 +31,8 @@
     </div>
 </div>
 
-<div id="slides">
-    banner image goes here.
+<div id="hero">
+    <img src="./image/kitchenUtensils.png"/>
 </div>
 <div>
     <p>Welcome to Byron Supply Company, where you can find all of your stylish, household needs.</p>
