@@ -10,17 +10,18 @@
 <head>
     <meta charset="utf-8">
     <title>Byron Supply Company</title>
-    <link href="./css/byron_supply_company.css" rel="stylesheet">
-    <link href="./css/index.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/byron_supply_company.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+
 </head>
 <body>
 <nav>
-    <div class="nav"><a href="index.jsp">Home</a></div>
-    <div class="nav"><a href="/Distributed_Java_war_exploded/ProductController">Products</a></div>
+    <div class="nav"><a href="./index.jsp">Home</a></div>
+    <div class="nav"><a href="./ProductController">Products</a></div>
     <div id="navHeader">Byron Supply Company</div>
     <div id="navHeaderSmall">BSC</div>
-    <div class="nav"><a href="WEB-INF/cart.jsp">Cart</a></div>
-    <div class="nav"><a href="WEB-INF/account.jsp">Account</a></div>
+    <div class="nav"><a href="./CartController">Cart</a></div>
+    <div class="nav"><a href="./AccountController">Account</a></div>
 </nav>
 <div id="dummyNav"></div>
 <div id="welcomeBannerBackground">
@@ -38,8 +39,6 @@
     <p>Welcome to Byron Supply Company, where you can find all of your stylish, household needs.</p>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="WEB-INF/js"></script>
 </body>
 <footer>
     Byron Supply Company<br>
