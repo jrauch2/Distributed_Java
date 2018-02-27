@@ -17,12 +17,12 @@
 </head>
 <body>
 <nav>
-    <div class="nav"><a href="index.jsp">Home</a></div>
-    <div class="nav"><a href="/Distributed_Java_war_exploded/ProductController">Products</a></div>
+    <div class="nav"><a href="./index.jsp">Home</a></div>
+    <div class="nav"><a href="./ProductController">Products</a></div>
     <div id="navHeader">Byron Supply Company</div>
     <div id="navHeaderSmall">BSC</div>
-    <div class="nav"><a href="cart.jsp">Cart</a></div>
-    <div class="nav"><a href="account.jsp">Account</a></div>
+    <div class="nav"><a href="./CartController">Cart</a></div>
+    <div class="nav"><a href="./AccountController">Account</a></div>
 </nav>
 <div id="dummyNav"></div>
 <div id="welcomeBannerBackground">
@@ -37,13 +37,15 @@
     <div id="centerPanel">
         <div class="product">
             <div class="imgFrame"><img src="<c:out value="${product.image}"/>"></div>
-            <span class="productName"><c:out value="${product.name}"/></span><br>
-            <span class="longDescription"><c:out value="${product.longDescription}"/></span>
+            <div class="productName"><c:out value="${product.name}"/></div><br>
+            <div class="longDescription"><c:out value="${product.longDescription}"/></div>
+            <div><button type="submit" name="addToCart" class="addToCart">Add to Cart</button></div>
         </div>
     </div>
     <div id="rightPanel"></div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="./js/productDetails.js"></script>
 </body>
 <footer>
     Byron Supply Company<br>

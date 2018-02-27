@@ -23,12 +23,12 @@
 </head>
 <body>
 <nav>
-    <div class="nav"><a href="../index.jsp">Home</a></div>
-    <div class="nav"><a href="products.jsp">Products</a></div>
+    <div class="nav"><a href="./index.jsp">Home</a></div>
+    <div class="nav"><a href="./ProductController">Products</a></div>
     <div id="navHeader">Byron Supply Company</div>
     <div id="navHeaderSmall">BSC</div>
-    <div class="nav"><a href="cart.jsp">Cart</a></div>
-    <div class="nav"><a href="account.jsp">Account</a></div>
+    <div class="nav"><a href="./CartController">Cart</a></div>
+    <div class="nav"><a href="./AccountController">Account</a></div>
 </nav>
 <div id="dummyNav"></div>
 <div id="welcomeBannerBackground">
