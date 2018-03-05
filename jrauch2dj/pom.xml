@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.wctc</groupId>
-  <artifactId>jrauch2.distributedjava</artifactId>
+  <artifactId>jrauch2.dj</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>jrauch2.distributedjava Maven Webapp</name>
+  <name>jrauch2.dj Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -16,6 +16,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>jrauch2.distributedjava</finalName>
+    <finalName>jrauch2.dj</finalName>
   </build>
 </project>
