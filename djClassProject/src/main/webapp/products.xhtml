@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Byron Supply Company</title>
+                <h:outputStylesheet name="css/byron_supply_company.css"/>
+                <h:outputStylesheet name="css/products.css"/>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+            <nav>
+                <div class="nav"><a href="./index.jsp">Home</a></div>
+                <div class="nav"><a href="./ProductController">Products</a></div>
+                <div id="navHeader">Byron Supply Company</div>
+                <div id="navHeaderSmall">BSC</div>
+                <div class="nav"><a href="./CartController">Cart</a></div>
+                <div class="nav"><a href="./AccountController">Account</a></div>
+            </nav>
+            <div id="dummyNav"></div>
+            <div id="welcomeBannerBackground">
+                <div id="welcomeBanner">
+                    <div class="nav"><a href="login.jsp">Login</a></div>
+                    <div>|</div>
+                    <div class ="nav"><a href="register.jsp">Register</a></div>
+                </div>
+            </div>
+            <div id="pageLayout">
+                <div id="leftPanel"></div>
+                <div id="productsGrid">
+<!--                    <c:forEach var="product" items="${productList}">
+                        <div class="product">
+                            <a href="?productID=<c:out value="${product.productID}"/>">
+                                <div class="imgFrame"><img src="<c:out value="${product.image}"/>"></div>
+                                <span class="productName"><c:out value="${product.name}"/></span><br>
+                                <span class="ProductInfoSmall"><c:out value="${product.shortDescription}"/></span>
+                            </a>
+                        </div>
+                    </c:forEach>-->
+                    <ui:repeat value="#{productBean.allProducts()}" var="product">
+                        <div class="product">
+                            <a href="?productID=">
+                                <div class="imgFrame"><img src=""/></div>
+                                <span class="productName"></span><br/>
+                                <span class="ProductInfoSmall"></span>
+                            </a>
+                        </div>
+                    </ui:repeat>
+                </div>
+                <div id="rightPanel"></div>
+            </div>
+
+        </h:body>
+
+    </f:view>
+</html>
+

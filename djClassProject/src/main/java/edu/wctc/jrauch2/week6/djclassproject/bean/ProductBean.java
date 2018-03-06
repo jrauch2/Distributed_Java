@@ -18,7 +18,7 @@ import javax.faces.event.AjaxBehaviorEvent;
 
 /**
  *
- * @author jmbra
+ * @author jrauch2
  */
 @Named(value = "productBean")
 @SessionScoped
@@ -55,8 +55,8 @@ public class ProductBean implements Serializable {
         }
     }
     
-    public String allNames() {
+    public String allProducts() {
         productList = productService.getProductList();
-        return "nameList";
+        return "productList";
     }
 }
