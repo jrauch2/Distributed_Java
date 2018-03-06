@@ -23,40 +23,21 @@ import javax.faces.event.AjaxBehaviorEvent;
 @Named(value = "productBean")
 @SessionScoped
 public class ProductBean implements Serializable {
-    private final ProductService productService = new ProductService();
-    private Product product;
-    private List<Product> productList;
+    private final ProductService PRODUCT_SERVICE = new ProductService();
     
     public ProductBean() {
     }
-    
-    public Product getName() {
-        return product;
-    }
-
-    public void setName(Product product) {
-        this.product = product;
-    }
 
     public List<Product> getProductList() {
-        return productList;
+        return PRODUCT_SERVICE.getProductList();
     }
 
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
-    }
-    
-    public void productDetails(AjaxBehaviorEvent event) {
-        try {
-            FacesContext.getCurrentInstance().getExternalContext().redirect("productDetails.xhtml?id=" + product.getProductID());
-        } catch (IOException ex) {
-            FacesMessage msg = new FacesMessage("IOException", product.getProductID());
-            FacesContext.getCurrentInstance().addMessage(null, msg);
-        }
-    }
-    
-    public String allProducts() {
-        productList = productService.getProductList();
-        return "productList";
-    }
+//    public void productDetails(AjaxBehaviorEvent event) {
+//        try {
+//            FacesContext.getCurrentInstance().getExternalContext().redirect("productDetails.xhtml?id=" + product.getProductID());
+//        } catch (IOException ex) {
+//            FacesMessage msg = new FacesMessage("IOException", product.getProductID());
+//            FacesContext.getCurrentInstance().addMessage(null, msg);
+//        }
+//    }
 }

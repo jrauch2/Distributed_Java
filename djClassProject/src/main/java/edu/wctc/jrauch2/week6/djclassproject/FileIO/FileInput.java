@@ -40,9 +40,6 @@ public class FileInput {
         }
     }
     
-    public FileInput(InputStream in) {
-        this.in = new BufferedReader(new InputStreamReader(in));
-    }
     /**
      * Read the next line from the file, then print the line to the terminal.
      */

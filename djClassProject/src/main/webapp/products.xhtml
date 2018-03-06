@@ -35,23 +35,12 @@
             <div id="pageLayout">
                 <div id="leftPanel"></div>
                 <div id="productsGrid">
-<!--                    <c:forEach var="product" items="${productList}">
-                        <div class="product">
-                            <a href="?productID=<c:out value="${product.productID}"/>">
-                                <div class="imgFrame"><img src="<c:out value="${product.image}"/>"></div>
-                                <span class="productName"><c:out value="${product.name}"/></span><br>
-                                <span class="ProductInfoSmall"><c:out value="${product.shortDescription}"/></span>
-                            </a>
-                        </div>
-                    </c:forEach>-->
-                    <ui:repeat value="#{productBean.allProducts()}" var="product">
-                        <div class="product">
-                            <a href="?productID=">
-                                <div class="imgFrame"><img src=""/></div>
-                                <span class="productName"></span><br/>
-                                <span class="ProductInfoSmall"></span>
-                            </a>
-                        </div>
+                    <ui:repeat value="#{productBean.productList}" var="product">
+                        <h:panelGroup class="product">
+                            <div class="imgFrame"><img src="#{product.image}"/></div>
+                                <span class="productName"><h:outputText value="#{product.name}"/></span><br/>
+                                <span class="ProductInfoSmall"><h:outputText value="#{product.shortDescription}"/></span>
+                        </h:panelGroup>
                     </ui:repeat>
                 </div>
                 <div id="rightPanel"></div>
