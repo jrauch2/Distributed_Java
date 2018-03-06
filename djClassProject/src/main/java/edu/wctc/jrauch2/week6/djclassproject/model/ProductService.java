@@ -1,11 +1,12 @@
 package edu.wctc.jrauch2.week6.djclassproject.model;
 
 import edu.wctc.jrauch2.week6.djclassproject.FileIO.FileInput;
+import java.io.File;
 
 import java.util.ArrayList;
 
 public class ProductService {
-    private FileInput products = new FileInput("D:\\OneDrive - Waukesha County Technical College\\Spring 2018\\Distributed Java\\Distributed_Java\\productList.csv");
+    private FileInput products = new FileInput(new File("D:/OneDrive - Waukesha County Technical College/Spring 2018/Distributed Java/Distributed_Java/djClassProject", "productList.csv"));
     private String line;
     private String[] productAsArray;
     private String image;
