@@ -12,6 +12,8 @@ import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.faces.event.AjaxBehaviorEvent;
@@ -28,16 +30,20 @@ public class ProductBean implements Serializable {
     public ProductBean() {
     }
 
+    public ProductService getPRODUCT_SERVICE() {
+        return PRODUCT_SERVICE;
+    }
+
     public List<Product> getProductList() {
         return PRODUCT_SERVICE.getProductList();
     }
 
-//    public void productDetails(AjaxBehaviorEvent event) {
-//        try {
-//            FacesContext.getCurrentInstance().getExternalContext().redirect("productDetails.xhtml?id=" + product.getProductID());
-//        } catch (IOException ex) {
-//            FacesMessage msg = new FacesMessage("IOException", product.getProductID());
-//            FacesContext.getCurrentInstance().addMessage(null, msg);
-//        }
-//    }
+    public void productDetail(AjaxBehaviorEvent event) {
+        try {
+            String productID = (String) event.getComponent().getAttributes().get("productID");
+            FacesContext.getCurrentInstance().getExternalContext().redirect("productDetails.xhtml?id=" + productID);
+        } catch (IOException ex) {
+            Logger.getLogger(ProductBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

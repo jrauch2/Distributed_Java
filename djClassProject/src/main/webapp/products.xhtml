@@ -36,11 +36,15 @@
                 <div id="leftPanel"></div>
                 <div id="productsGrid">
                     <ui:repeat value="#{productBean.productList}" var="product">
-                        <h:panelGroup class="product">
-                            <div class="imgFrame"><img src="#{product.image}"/></div>
-                                <span class="productName"><h:outputText value="#{product.name}"/></span><br/>
-                                <span class="ProductInfoSmall"><h:outputText value="#{product.shortDescription}"/></span>
-                        </h:panelGroup>
+                        <h:form>
+                            <h:panelGroup class="product">
+                                <f:attribute name="productID" value="#{product.productID}"/>
+                                <f:ajax event="click" listener="#{productBean.productDetail}"/>
+                                <div class="imgFrame"><img src="#{product.image}"/></div>
+                                    <span class="productName"><h:outputText value="#{product.name}"/></span><br/>
+                                    <span class="ProductInfoSmall"><h:outputText value="#{product.shortDescription}"/></span>
+                            </h:panelGroup>
+                        </h:form>
                     </ui:repeat>
                 </div>
                 <div id="rightPanel"></div>
