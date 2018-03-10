@@ -14,6 +14,10 @@ public class FileInput {
     private String fileName;
     private File file;
 
+    public FileInput(InputStream inputStream) {
+        in = new BufferedReader(new InputStreamReader(inputStream));
+    }
+
     /**
      *
      * @param fileName The name of the file to be read.
