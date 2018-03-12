@@ -7,12 +7,13 @@ import java.util.ArrayList;
 
 public class ProductService {
     private FileInput products = new FileInput(new File("D:/OneDrive - Waukesha County Technical College/Spring 2018/Distributed Java/Distributed_Java/djClassProject", "productList.csv"));
+//    private FileInput products;
     private String line;
     private String[] productAsArray;
-    private String image;
     private ArrayList<Product> productList = new ArrayList<>();
 
     public ProductService() {
+//        products = new FileInput(ProductService.class.getClassLoader().getResourceAsStream("productList.csv"));
         while ((line = products.fileReadLine()) != null) {
             productAsArray = line.split("\\|");
             try {

@@ -4,7 +4,6 @@
 }
 
 .imgFrame {
-    border: solid white;
     margin: 2px;
     height: 150px;
 }
@@ -21,6 +20,7 @@ img {
     background-color: rgba(255,255,255, 0.8);
     margin: 1px;
     margin-top: 2px;
+    width: 100%;
 
 }
 
