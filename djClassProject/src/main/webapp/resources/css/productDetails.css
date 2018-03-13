@@ -1,8 +1,8 @@
-.imgFrame {
+.img {
     width: 50%;
 }
 
-.imgFrame > img {
+.img > img {
     width: 100%;
 }
 

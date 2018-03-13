@@ -3,17 +3,12 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.imgFrame {
-    margin: 2px;
-    height: 150px;
-}
-
-img {
-    height: 100%;
+.img {
+    height: 160px;
 }
 
 .product {
-    height: 300px;
+    height: 350px;
     border: solid black 0.5px;
     text-align: center;
     transition: background-color 0.5s ease;
@@ -28,4 +23,8 @@ img {
     transition: background-color 0.5s ease;
     background-color: rgba(255, 235, 205, 0.8);
     cursor: pointer;
+}
+
+tr {
+    height: 100px;
 }

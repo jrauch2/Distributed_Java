@@ -17,12 +17,12 @@
 
         <h:body>
             <nav>
-                <div class="nav"><h:link value="Home"/></div>
-                <div class="nav"><a href="./products.xhtml">Products</a></div>
+                <h:link value="Home" outcome="index" class="nav"/>
+                <h:link value="Products" outcome="products" class="nav"/>
                 <div id="navHeader">Byron Supply Company</div>
                 <div id="navHeaderSmall">BSC</div>
-                <div class="nav"><a href="./CartController">Cart</a></div>
-                <div class="nav"><a href="./AccountController">Account</a></div>
+                <h:link value="Cart" outcome="cart" class="nav"/>
+                <h:link value="Account" outcome="account" class="nav"/>
             </nav>
             <div id="dummyNav"></div>
             <div id="welcomeBannerBackground">

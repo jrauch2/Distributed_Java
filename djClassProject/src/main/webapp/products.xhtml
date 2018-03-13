@@ -17,12 +17,12 @@
 
         <h:body>
             <nav>
-                <div class="nav"><a href="./index.jsp">Home</a></div>
-                <div class="nav"><a href="./ProductController">Products</a></div>
+                <h:link value="Home" outcome="index" class="nav"/>
+                <h:link value="Products" outcome="products" class="nav"/>
                 <div id="navHeader">Byron Supply Company</div>
                 <div id="navHeaderSmall">BSC</div>
-                <div class="nav"><a href="./CartController">Cart</a></div>
-                <div class="nav"><a href="./AccountController">Account</a></div>
+                <h:link value="Cart" outcome="cart" class="nav"/>
+                <h:link value="Account" outcome="account" class="nav"/>
             </nav>
             <div id="dummyNav"></div>
             <div id="welcomeBannerBackground">
@@ -41,9 +41,8 @@
                                 <f:attribute name="productID" value="#{product.productID}"/>
                                 <f:ajax event="click" listener="#{productBean.productDetail}" />
                                 <p:panelGrid columns="1" class="product">                               
-                                    <h:graphicImage name="#{product.image}" class="imgFrame"/>
+                                    <h:graphicImage name="#{product.image}" class="img"/>
                                     <h:outputText value="#{product.name}" class="productName"/>
-                                    <h:outputText value="#{product.shortDescription}" class="ProductInfoSmall"/>
                                 </p:panelGrid>
                             </p:commandLink>
 

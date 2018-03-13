@@ -14,7 +14,6 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.faces.event.AjaxBehaviorEvent;
 
@@ -25,6 +24,7 @@ import javax.faces.event.AjaxBehaviorEvent;
 @Named(value = "productBean")
 @SessionScoped
 public class ProductBean implements Serializable {
+    
     private final ProductService PRODUCT_SERVICE = new ProductService();
     
     public ProductBean() {
@@ -37,10 +37,25 @@ public class ProductBean implements Serializable {
     public List<Product> getProductList() {
         return PRODUCT_SERVICE.getProductList();
     }
+    
+    public Product getProduct(String productID){
+        Product product = null;
+        for (Product p : PRODUCT_SERVICE.getProductList()) {
+            if (productID.equals(p.getProductID())) {
+                product = p;
+            }
+        }
+        if (product != null) {
+            return product;
+        } else {
+            throw new IllegalArgumentException("Product not found");
+        }
+    }
 
     public void productDetail(AjaxBehaviorEvent event) {
         try {
             String productID = (String) event.getComponent().getAttributes().get("productID");
+            
             FacesContext.getCurrentInstance().getExternalContext().redirect("productDetails.xhtml?id=" + productID);
         } catch (IOException ex) {
             Logger.getLogger(ProductBean.class.getName()).log(Level.SEVERE, null, ex);
