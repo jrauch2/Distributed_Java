@@ -40,7 +40,11 @@
                             <h:graphicImage name="#{productBean.PRODUCT_SERVICE.getProduct(param['id']).image}" class="img"/>
                             <h:outputText value="#{productBean.PRODUCT_SERVICE.getProduct(param['id']).name}" class="productName"/>
                             <div class="longDescription"><h:outputText value="#{productBean.PRODUCT_SERVICE.getProduct(param['id']).longDescription}"/></div>
-                            <div><button type="submit" name="addToCart" class="addToCart">Add to Cart</button></div>
+                            <h:commandLink value="Add to Cart">
+                                <f:attribute name="productID" value="100001"/>
+                                <f:ajax event="click" listener="#{cartBean.addToCart(event)}" />
+                            </h:commandLink>
+                            
                         </h:form>
                     </div>
                 </div>

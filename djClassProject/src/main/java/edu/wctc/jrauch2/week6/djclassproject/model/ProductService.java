@@ -32,11 +32,12 @@ public class ProductService {
                 matchedProduct = product;
             }
         }
-        if (matchedProduct != null) {
-            return matchedProduct;
-        } else {
-            throw new IllegalArgumentException("Invalid productID. Product not found.");
-        }
+        return matchedProduct;
+//        if (matchedProduct != null) {
+//            return matchedProduct;
+//        } else {
+//            throw new IllegalArgumentException("Invalid productID. Product not found.");
+//        }
     }
 
     public ArrayList<Product> getProductList() {

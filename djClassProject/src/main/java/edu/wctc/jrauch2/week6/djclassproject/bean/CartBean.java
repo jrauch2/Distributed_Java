@@ -7,11 +7,16 @@ package edu.wctc.jrauch2.week6.djclassproject.bean;
 
 import edu.wctc.jrauch2.week6.djclassproject.model.Product;
 import edu.wctc.jrauch2.week6.djclassproject.model.ProductService;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.FacesContext;
+import javax.faces.event.AjaxBehaviorEvent;
 
 /**
  *
@@ -19,50 +24,51 @@ import javax.enterprise.context.SessionScoped;
  */
 @Named(value = "cartBean")
 @SessionScoped
-public class CartBean implements Serializable{
+public class CartBean implements Serializable {
     private final ProductService PRODUCT_SERVICE = new ProductService();
-    private Map<Product, Integer> cart;
+    private final Map<Product, Integer> CART;
     private Object productFound;
     private Product product;
+    private String productID;
 
     /**
      * Creates a new instance of CartBean
      */
     public CartBean() {
-        cart = new HashMap<>();
+        CART = new HashMap<>();
     }
 
-    public Map<Product, Integer> getCart() {
-        return cart;
+    public Map<Product, Integer> getCART() {
+        return CART;
     }
     
-    private Product getProduct(String productID) {
-        return PRODUCT_SERVICE.getProduct(productID);
-    }
-    
-    public void addToCart(String productID) {
-        product = getProduct(productID);
-        productFound = cart.get(product);
-        
-        if (productFound == null) {
-            cart.put(product, 1);
-        }
-        else {
-            cart.put(product, cart.get(product) + 1);
+    public void addToCart(AjaxBehaviorEvent event) {
+        try {
+            productID = (String) event.getComponent().getAttributes().get("productID");
+            product = PRODUCT_SERVICE.getProduct(productID);
+            productFound = CART.get(product);
+
+            if (productFound == null) {
+                CART.put(product, 1);
+            }
+            else {
+                CART.put(product, CART.get(product) + 1);
+            }
+
+            FacesContext.getCurrentInstance().getExternalContext().redirect("cart.xhtml");
+        } catch (IOException ex) {
+            Logger.getLogger(ProductBean.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
     public void updateCart(String productID, int quantity) {
-        product = getProduct(productID);
-        productFound = cart.get(product);
+        product = PRODUCT_SERVICE.getProduct(productID);
+        productFound = CART.get(product);
         
         if (productFound != null && quantity == 0) {
-            cart.remove(product);
+            CART.remove(product);
         } else if (productFound != null){
-            cart.put(product, quantity);
+            CART.put(product, quantity);
         }
-    }
-        
-        
-    
+    }    
 }
