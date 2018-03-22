@@ -21,15 +21,15 @@
                 <h:link value="Products" outcome="products" class="nav"/>
                 <div id="navHeader">Byron Supply Company</div>
                 <div id="navHeaderSmall">BSC</div>
-                <h:link value="Cart" outcome="cart" class="nav"/>
+                <h:link id="cartQuantity" value="Cart #{(cartBean.numberOfItemsInCart == 0) ? '' : cartBean.numberOfItemsInCart}" outcome="cart" class="nav"/>
                 <h:link value="Account" outcome="account" class="nav"/>
             </nav>
             <div id="dummyNav"></div>
             <div id="welcomeBannerBackground">
                 <div id="welcomeBanner">
-                    <div class="nav"><a href="login.jsp">Login</a></div>
+                    <div class="nav"><a href="WEB-INF/login.jsp">Login</a></div>
                     <div>|</div>
-                    <div class ="nav"><a href="register.jsp">Register</a></div>
+                    <div class ="nav"><a href="WEB-INF/register.jsp">Register</a></div>
                 </div>
             </div>
             <div id="pageLayout">

@@ -21,15 +21,15 @@
                 <h:link value="Products" outcome="products" class="nav"/>
                 <div id="navHeader">Byron Supply Company</div>
                 <div id="navHeaderSmall">BSC</div>
-                <h:link value="Cart" outcome="cart" class="nav"/>
+                <h:link id="cartQuantity" value="Cart #{(cartBean.numberOfItemsInCart == 0) ? '' : cartBean.numberOfItemsInCart}" outcome="cart" class="nav"/>
                 <h:link value="Account" outcome="account" class="nav"/>
             </nav>
             <div id="dummyNav"></div>
             <div id="welcomeBannerBackground">
                 <div id="welcomeBanner">
-                    <div class="nav"><a href="login.jsp">Login</a></div>
+                    <div class="nav"><a href="WEB-INF/login.jsp">Login</a></div>
                     <div>|</div>
-                    <div class ="nav"><a href="register.jsp">Register</a></div>
+                    <div class ="nav"><a href="WEB-INF/register.jsp">Register</a></div>
                 </div>
             </div>
             <div id="pageLayout">
@@ -40,10 +40,7 @@
                             <h:graphicImage name="#{productBean.PRODUCT_SERVICE.getProduct(param['id']).image}" class="img"/>
                             <h:outputText value="#{productBean.PRODUCT_SERVICE.getProduct(param['id']).name}" class="productName"/>
                             <div class="longDescription"><h:outputText value="#{productBean.PRODUCT_SERVICE.getProduct(param['id']).longDescription}"/></div>
-                            <h:commandLink value="Add to Cart">
-                                <f:attribute name="productID" value="100001"/>
-                                <f:ajax event="click" listener="#{cartBean.addToCart(event)}" />
-                            </h:commandLink>
+                            <p:commandButton value="Add" update=":cartQuantity" actionListener="#{cartBean.addToCart(name)}" />
                             
                         </h:form>
                     </div>

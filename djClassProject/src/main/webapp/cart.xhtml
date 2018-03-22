@@ -1,8 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>BSC: Cart</title>
         <h:outputStylesheet name="css/byron_supply_company.css"/>
@@ -14,15 +16,15 @@
             <h:link value="Products" outcome="products" class="nav"/>
             <div id="navHeader">Byron Supply Company</div>
             <div id="navHeaderSmall">BSC</div>
-            <h:link value="Cart" outcome="cart" class="nav"/>
+            <h:link id="cartQuantity" value="Cart #{(cartBean.numberOfItemsInCart == 0) ? '' : cartBean.numberOfItemsInCart}" outcome="cart" class="nav"/>
             <h:link value="Account" outcome="account" class="nav"/>
         </nav>
         <div id="dummyNav"></div>
         <div id="welcomeBannerBackground">
             <div id="welcomeBanner">
-                <div class="nav"><a href="login.jsp">Login</a></div>
+                <div class="nav"><a href="WEB-INF/login.jsp">Login</a></div>
                 <div>|</div>
-                <div class ="nav"><a href="register.jsp">Register</a></div>
+                <div class ="nav"><a href="WEB-INF/register.jsp">Register</a></div>
             </div>
         </div>
         <div id="pageLayout">
@@ -30,12 +32,12 @@
             <div id="centerPanel">
                 <div id="cartItemSummary">
                     Cart Summary:<br/>
-                        <ui:repeat value="#{cart.getCart()}" var="cartItem">
+<!--                    <ui:repeat value="#{cartBean.cart}" var="cartItem">
                         <div class="cartItem">
                             <img src="#{cartItem.image}" alt="product image"/>
                             #{cartItem.name}
                         </div>
-                        </ui:repeat>
+                    </ui:repeat>-->
                 </div>
 
                 <div id="cartOrderTotals">
