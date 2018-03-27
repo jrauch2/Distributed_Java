@@ -3,7 +3,7 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui" xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
 
     <f:view contentType="text/html">
         <h:head>
@@ -37,10 +37,17 @@
                 <div id="centerPanel">
                     <div class="product">
                         <h:form>
-                            <h:graphicImage name="#{productBean.PRODUCT_SERVICE.getProduct(param['id']).image}" class="img"/>
-                            <h:outputText value="#{productBean.PRODUCT_SERVICE.getProduct(param['id']).name}" class="productName"/>
-                            <div class="longDescription"><h:outputText value="#{productBean.PRODUCT_SERVICE.getProduct(param['id']).longDescription}"/></div>
-                            <p:commandButton value="Add" update=":cartQuantity" actionListener="#{cartBean.addToCart(name)}" />
+                            
+                            <c:set var="product" value="#{productBean.PRODUCT_SERVICE.getProduct(param['id'])}"/>
+                            <f:passThroughAttribute name="product" value="#{productBean.PRODUCT_SERVICE.getProduct(param['id'])}"/>
+                            <h:graphicImage name="#{product.image}" class="img"/>
+                            <h:outputText value="#{product.name}" class="productName"/>
+                            <div class="longDescription"><h:outputText value="#{product.longDescription}"/></div>
+                            <p:commandButton value="Add to Cart"
+                                             actionListener="#{cartBean.addToCart(product)}"
+                                             update=":cartQuantity" />
+                                             
+                                             
                             
                         </h:form>
                     </div>
