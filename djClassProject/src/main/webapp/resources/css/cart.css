@@ -21,3 +21,16 @@
 #test {
     height: 1000px;
 }
+
+.quantityField {
+    width: 30px;
+    text-align: center;
+}
+
+.cartSummaryDataTable {
+    width: 100%;
+}
+
+.cartProductImage {
+    width: 100px;
+}
