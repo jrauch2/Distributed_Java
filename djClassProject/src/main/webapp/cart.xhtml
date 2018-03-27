@@ -32,16 +32,30 @@
             <div id="centerPanel">
                 <div id="cartItemSummary">
                     Cart Summary:<br/>
-<!--                    <ui:repeat value="#{cartBean.cart}" var="cartItem">
-                        <div class="cartItem">
-                            <img src="#{cartItem.image}" alt="product image"/>
-                            #{cartItem.name}
-                        </div>
-                    </ui:repeat>-->
+                    <h:dataTable value="#{cartBean.keyList}" var="key" class="cartSummaryDataTable">
+                        <h:column>
+                            <p:inputText class="quantityField" 
+                                         value="#{cartBean.contents.get(key)}" 
+                                         onkeypress="if(event.which &lt; 48 || event.which &gt; 57) return false;" >
+                                
+                            </p:inputText>
+                        </h:column> 
+                        <h:column> 
+                            <h:graphicImage name="#{key.image}" class="cartProductImage"/>
+                        </h:column>
+                        <h:column> 
+                            #{key.name}
+                        </h:column>
+                        <h:column>
+                            <h:outputText id="lineTotal" value="$#{key.retail * cartBean.contents.get(key)}">
+                                <f:convertNumber minFractionDigits="2"/>
+                            </h:outputText>
+                        </h:column>
+                    </h:dataTable>
                 </div>
 
                 <div id="cartOrderTotals">
-                    Subtotal: $<span id="subtotal"><h:outputText value="#{cart.subtotal}"/></span><br/>
+                    Subtotal: $<span id="subtotal"><h:outputText value="#{cartBean.cart.subtotal}"/></span><br/>
                     Tax (<span id="taxRate">0.0</span>%): $<span id="taxTotal"><h:outputText value="#{cart.tax}"/></span><br/>
                     Total: $<span id="total"><h:outputText value="#{cart.grandTotal}"/></span>
                 </div>
