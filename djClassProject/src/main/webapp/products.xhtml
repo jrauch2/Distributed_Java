@@ -45,7 +45,9 @@
                                     <h:outputText value="#{product.name}" class="productName"/>
                                 </p:panelGrid>
                             </p:commandLink>
-
+                            <p:commandButton value="Add to Cart"
+                                                 update=":cartQuantity"
+                                                 action="#{cartBean.addToCart(product)}"/>
                         </h:form>
                     </ui:repeat>
                 </div>
