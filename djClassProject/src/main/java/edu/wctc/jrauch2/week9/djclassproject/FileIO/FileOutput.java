@@ -1,4 +1,4 @@
-package edu.wctc.jrauch2.week6.djclassproject.FileIO;
+package edu.wctc.jrauch2.week9.djclassproject.FileIO;
 
 import java.io.*;
 

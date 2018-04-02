@@ -1,6 +1,6 @@
-package edu.wctc.jrauch2.week6.djclassproject.model;
+package edu.wctc.jrauch2.week9.djclassproject.model;
 
-import edu.wctc.jrauch2.week6.djclassproject.FileIO.FileInput;
+import edu.wctc.jrauch2.week9.djclassproject.FileIO.FileInput;
 import java.io.File;
 
 import java.util.ArrayList;

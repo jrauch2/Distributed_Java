@@ -1,4 +1,4 @@
-package edu.wctc.jrauch2.week6.djclassproject.model;
+package edu.wctc.jrauch2.week9.djclassproject.model;
 
 public class Product {
     private String productID;

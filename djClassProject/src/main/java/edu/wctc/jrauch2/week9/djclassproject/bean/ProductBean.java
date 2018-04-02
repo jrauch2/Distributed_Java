@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.wctc.jrauch2.week6.djclassproject.bean;
+package edu.wctc.jrauch2.week9.djclassproject.bean;
 
-import edu.wctc.jrauch2.week6.djclassproject.model.ProductService;
-import edu.wctc.jrauch2.week6.djclassproject.model.Product;
+import edu.wctc.jrauch2.week9.djclassproject.model.ProductService;
+import edu.wctc.jrauch2.week9.djclassproject.model.Product;
 import java.io.IOException;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
