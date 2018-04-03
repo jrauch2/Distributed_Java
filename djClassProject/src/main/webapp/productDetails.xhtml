@@ -43,10 +43,7 @@
                             <h:graphicImage name="#{product.image}" class="img"/>
                             <h:outputText value="#{product.name}" class="productName"/>
                             <div class="longDescription"><h:outputText value="#{product.longDescription}"/></div>
-                            <p:commandButton value="Add to Cart"
-                                             actionListener="#{cartBean.addToCart(product)}"
-                                             update=":cartQuantity" />
-                                             
+                                     
                                              
                             
                         </h:form>

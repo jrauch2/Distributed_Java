@@ -6,8 +6,10 @@
 package edu.wctc.jrauch2.week9.djclassproject.data;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import javax.naming.Context;
 import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 /**
@@ -15,11 +17,19 @@ import javax.sql.DataSource;
  * @author jmbra
  */
 public class ConnectionUtil {
-    public static Connection getConnection() throws Exception {
+    public static Connection getConnection() {
+        
+        DataSource ds = null;
+        Connection conn = null;
+        
+        try {
         Context initContext = new InitialContext();
         Context webContext = (Context) initContext.lookup("java:comp/env");
-        
-        DataSource ds = (DataSource) webContext.lookup("jdbc/myProducts");
-        return ds.getConnection();
+        ds = (DataSource) webContext.lookup("jdbc/myProducts");
+        conn = ds.getConnection();
+        } catch (NamingException | SQLException e) {
+            
+        }
+        return conn;
     }
 }
