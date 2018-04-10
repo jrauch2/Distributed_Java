@@ -1,8 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
 
     <f:view contentType="text/html">
@@ -16,6 +16,7 @@
         </h:head>
 
         <h:body>
+            
             <nav>
                 <h:link value="Home" outcome="index" class="nav"/>
                 <h:link value="Products" outcome="products" class="nav"/>
@@ -27,14 +28,12 @@
             <div id="dummyNav"></div>
             <div id="welcomeBannerBackground">
                 <div id="welcomeBanner">
-                    <div class="nav"><a href="WEB-INF/login.jsp">Login</a></div>
+                    <div class="nav"><a href="//TODO">Login</a></div>
                     <div>|</div>
-                    <div class ="nav"><a href="WEB-INF/register.jsp">Register</a></div>
+                    <div class ="nav"><a href="//TODO">Register</a></div>
                 </div>
             </div>
-            <div id="hero">
-                <h:graphicImage name="images/kitchenUtensils.png"/>
-            </div>
+            <h:graphicImage id="hero" name="images/kitchenUtensils.png"/>
             <div>
                 <p>Welcome to Byron Supply Company, where you can find all of your stylish, household needs.</p>
             </div>

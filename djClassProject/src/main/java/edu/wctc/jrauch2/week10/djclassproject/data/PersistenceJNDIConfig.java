@@ -30,7 +30,7 @@ public class PersistenceJNDIConfig {
 		emf.setJpaVendorAdapter(new EclipseLinkJpaVendorAdapter());
 		// Following required to avoid looking for persistence.xml
 		emf.setPackagesToScan("edu.wctc.jrauch2.week10.djclassproject");
-		emf.setPersistenceUnitName("names-pu");
+		emf.setPersistenceUnitName("products-pu");
 		emf.setLoadTimeWeaver(new ReflectiveLoadTimeWeaver());
 
 		Properties properties = new Properties();

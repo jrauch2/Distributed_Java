@@ -1,17 +1,21 @@
 package edu.wctc.jrauch2.week10.djclassproject.model;
 
+import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Product {
+public class Product implements Serializable {
     
     @Id
     @GeneratedValue
     private String productID;
     
+    @Column(name = "productName")
     private String name;
+    
     private String shortDescription;
     private String longDescription;
     private String image;
@@ -22,6 +26,9 @@ public class Product {
     private int quantityOnOrder;
     private boolean discontinued;
     private boolean sale;
+
+    public Product() {
+    }
 
     /**
      * Constructor including all parameters.

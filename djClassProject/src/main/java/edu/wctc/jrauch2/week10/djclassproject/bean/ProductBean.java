@@ -14,6 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.faces.context.FacesContext;
 import javax.faces.event.AjaxBehaviorEvent;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -25,9 +26,11 @@ import org.springframework.stereotype.Component;
 @Scope("session")
 public class ProductBean implements Serializable {
     
-    private final ProductService PRODUCT_SERVICE = new ProductService();
+    private final ProductService PRODUCT_SERVICE;
     
-    public ProductBean() {
+    @Autowired
+    public ProductBean(ProductService PRODUCT_SERVICE) {
+        this.PRODUCT_SERVICE = PRODUCT_SERVICE;
     }
 
     public ProductService getPRODUCT_SERVICE() {
