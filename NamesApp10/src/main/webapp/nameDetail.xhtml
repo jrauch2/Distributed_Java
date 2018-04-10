@@ -3,29 +3,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
-    <h:head>
-        <title>Name Detail</title>
-    </h:head>
-    <h:body>
-        <p:panelGrid columns="2">
-            <h:outputLabel value="First:" />
-            <h:outputText value="#{nameBean.name.first}" />
+		<h:head>
+				<title>Name Detail</title>
+		</h:head>
+		<h:body>
+			<p:panelGrid columns="2">
+				<h:outputLabel value="First:" />
+				<h:outputText value="#{nameBean.name.first}" />
 
-            <h:outputLabel value="Last:" />
-            <h:outputText value="#{nameBean.name.last}" />
+				<h:outputLabel value="Last:" />
+				<h:outputText value="#{nameBean.name.last}" />
 
-            <h:outputLabel value="Street:" />
-            <h:outputText value="#{nameBean.name.address.street}" />
+				<h:outputLabel value="Street:" />
+				<h:outputText value="#{nameBean.name.address.street}" />
 
-            <h:outputLabel value="City:" />
-            <h:outputText value="#{nameBean.name.address.city}" />
+				<h:outputLabel value="City:" />
+				<h:outputText value="#{nameBean.name.address.city}" />
 
-            <h:outputLabel value="State:" />
-            <h:outputText value="#{nameBean.name.address.state}" />
+				<h:outputLabel value="State:" />
+				<h:outputText value="#{nameBean.name.address.state}" />
 
-            <h:outputLabel value="ZipCode:" />
-            <h:outputText value="#{nameBean.name.address.zipCode}" />
-        </p:panelGrid>
-    </h:body>
+				<h:outputLabel value="Zip:" />
+				<h:outputText value="#{nameBean.name.address.zip}" />
+			</p:panelGrid>
+		</h:body>
 </html>
 
