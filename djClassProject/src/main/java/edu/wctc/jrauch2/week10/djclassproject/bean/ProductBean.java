@@ -3,26 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.wctc.jrauch2.week9.djclassproject.bean;
+package edu.wctc.jrauch2.week10.djclassproject.bean;
 
-import edu.wctc.jrauch2.week9.djclassproject.model.ProductService;
-import edu.wctc.jrauch2.week9.djclassproject.model.Product;
+import edu.wctc.jrauch2.week10.djclassproject.service.ProductService;
+import edu.wctc.jrauch2.week10.djclassproject.model.Product;
 import java.io.IOException;
-import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.faces.context.FacesContext;
 import javax.faces.event.AjaxBehaviorEvent;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author jrauch2
  */
-@Named(value = "productBean")
-@SessionScoped
+@Component("productBean")
+@Scope("session")
 public class ProductBean implements Serializable {
     
     private final ProductService PRODUCT_SERVICE = new ProductService();

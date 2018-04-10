@@ -1,17 +1,17 @@
-package edu.wctc.jrauch2.week9.djclassproject.bean;
+package edu.wctc.jrauch2.week10.djclassproject.bean;
 
-import edu.wctc.jrauch2.week9.djclassproject.model.Cart;
-import edu.wctc.jrauch2.week9.djclassproject.model.CartService;
-import edu.wctc.jrauch2.week9.djclassproject.model.Product;
-import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
+import edu.wctc.jrauch2.week10.djclassproject.model.Cart;
+import edu.wctc.jrauch2.week10.djclassproject.service.CartService;
+import edu.wctc.jrauch2.week10.djclassproject.model.Product;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 import javax.faces.context.FacesContext;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
-@Named(value = "cartBean")
-@SessionScoped
+@Component("cartBean")
+@Scope("session")
 public class CartBean implements Serializable {
 
 	private final String sessionId;

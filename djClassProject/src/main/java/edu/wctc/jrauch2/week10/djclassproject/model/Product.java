@@ -1,7 +1,16 @@
-package edu.wctc.jrauch2.week9.djclassproject.model;
+package edu.wctc.jrauch2.week10.djclassproject.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Product {
+    
+    @Id
+    @GeneratedValue
     private String productID;
+    
     private String name;
     private String shortDescription;
     private String longDescription;

@@ -1,4 +1,4 @@
-package edu.wctc.jrauch2.week9.djclassproject.model;
+package edu.wctc.jrauch2.week10.djclassproject.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
