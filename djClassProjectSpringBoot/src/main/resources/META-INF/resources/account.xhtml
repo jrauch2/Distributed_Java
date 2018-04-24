@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>BSC: Account</title>
+    </h:head>
+    <h:body>
+        <nav>
+            <h:link value="Home" class="nav"/>
+            <h:link value="Products" outcome="products" class="nav"/>
+            <div id="navHeader">Byron Supply Company</div>
+            <div id="navHeaderSmall">BSC</div>
+            <h:link id="cartQuantity" value="Cart #{(cartBean.numberOfItemsInCart == 0) ? '' : cartBean.numberOfItemsInCart}" outcome="cart" class="nav"/>
+            <h:link value="Account" outcome="account" class="nav"/>
+        </nav>
+        <div id="dummyNav"></div>
+        <div id="welcomeBannerBackground">
+            <div id="welcomeBanner">
+                <div class="nav"><a href="WEB-INF/login.jsp">Login</a></div>
+                <div>|</div>
+                <div class ="nav"><a href="WEB-INF/register.jsp">Register</a></div>
+            </div>
+        </div>
+        <div id="pageLayout">
+            <div id="leftPanel"></div>
+            <div id="centerPanel">
+                </div>
+            <div id="rightPanel"></div>
+</div>
+    </h:body>
+</html>
+

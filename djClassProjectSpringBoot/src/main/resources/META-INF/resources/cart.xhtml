@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>BSC: Cart</title>
+        <h:outputStylesheet name="/css/byron_supply_company.css"/>
+        <h:outputStylesheet name="/css/cart.css"/>
+    </h:head>
+    <h:body>
+        <nav>
+            <h:link value="Home" class="nav"/>
+            <h:link value="Products" outcome="products" class="nav"/>
+            <div id="navHeader">Byron Supply Company</div>
+            <div id="navHeaderSmall">BSC</div>
+            <h:link id="cartQuantity" value="Cart #{(cartBean.numberOfItemsInCart == 0) ? '' : cartBean.numberOfItemsInCart}" outcome="cart" class="nav"/>
+            <h:link value="Account" outcome="account" class="nav"/>
+        </nav>
+        <div id="dummyNav"></div>
+        <div id="welcomeBannerBackground">
+            <div id="welcomeBanner">
+                <div class="nav"><a href="WEB-INF/login.jsp">Login</a></div>
+                <div>|</div>
+                <div class ="nav"><a href="WEB-INF/register.jsp">Register</a></div>
+            </div>
+        </div>
+        <div id="pageLayout">
+            <div id="leftPanel"></div>
+            <div id="centerPanel">
+                <div id="cartItemSummary">
+                    Cart Summary:<br/>
+                    <h:dataTable value="#{cartBean.keyList}" var="key" class="cartSummaryDataTable">
+                        <h:column>
+                            <p:inputText class="quantityField" 
+                                         value="#{cartBean.contents.get(key)}" 
+                                         onkeypress="if(event.which &lt; 48 || event.which &gt; 57) return false;" >
+                                
+                            </p:inputText>
+                        </h:column> 
+                        <h:column> 
+                            <h:graphicImage name="#{key.image}" class="cartProductImage"/>
+                        </h:column>
+                        <h:column> 
+                            #{key.name}
+                        </h:column>
+                        <h:column>
+                            <h:outputText id="lineTotal" value="$#{key.retail * cartBean.contents.get(key)}">
+                                <f:convertNumber minFractionDigits="2"/>
+                            </h:outputText>
+                        </h:column>
+                    </h:dataTable>
+                </div>
+
+                <div id="cartOrderTotals">
+                    Subtotal: $<span id="subtotal"><h:outputText value="#{cartBean.cart.subtotal}"/></span><br/>
+                    Tax (<span id="taxRate">0.0</span>%): $<span id="taxTotal"><h:outputText value="#{cart.tax}"/></span><br/>
+                    Total: $<span id="total"><h:outputText value="#{cart.grandTotal}"/></span>
+                </div>
+                <div id="buttons">
+                    <button id="payNow">Pay Now</button>
+                </div>
+            </div>
+            <div id="rightPanel"></div>
+</div>
+
+    </h:body>
+</html>

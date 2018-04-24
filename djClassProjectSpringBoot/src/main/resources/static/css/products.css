@@ -1,0 +1,30 @@
+#productsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.img {
+    height: 160px;
+}
+
+.product {
+    height: 350px;
+    border: solid black 0.5px;
+    text-align: center;
+    transition: background-color 0.5s ease;
+    background-color: rgba(255,255,255, 0.8);
+    margin: 1px;
+    margin-top: 2px;
+    width: 100%;
+
+}
+
+.product:hover {
+    transition: background-color 0.5s ease;
+    background-color: rgba(255, 235, 205, 0.8);
+    cursor: pointer;
+}
+
+tr {
+    height: 100px;
+}

@@ -1,0 +1,36 @@
+#cartItemSummary, #cartOrderTotals {
+	border: solid black 0.5px;
+    min-height: 80px;
+    max-width: 720px;
+    margin: 0 auto;
+    margin-bottom: 2px;
+    padding: 10px;
+    background-color: white;
+}
+
+#cartOrderTotals {
+	text-align: right;
+}
+
+#buttons {
+    text-align: right;
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+#test {
+    height: 1000px;
+}
+
+.quantityField {
+    width: 30px;
+    text-align: center;
+}
+
+.cartSummaryDataTable {
+    width: 100%;
+}
+
+.cartProductImage {
+    width: 100px;
+}
