@@ -10,8 +10,8 @@
             <f:facet name="first">
                 <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
                 <title>Byron Supply Company</title>
-                <h:outputStylesheet name="/css/byron_supply_company.css"/>
-                <h:outputStylesheet name="/css/products.css"/>
+                <link href="byron_supply_company.css" rel="stylesheet"/>
+                <link href="products.css" rel="stylesheet"/>
             </f:facet>
         </h:head>
 
@@ -40,8 +40,8 @@
                             <p:commandLink>
                                 <f:attribute name="productID" value="#{product.productID}"/>
                                 <f:ajax event="click" listener="#{productBean.productDetail}" />
-                                <p:panelGrid columns="1" class="product">                               
-                                    <h:graphicImage name="#{product.image}" class="img"/>
+                                <p:panelGrid columns="1" class="product">
+                                    <img src="#{product.image}" class="img"/>
                                     <h:outputText value="#{product.name}" class="productName"/>
                                 </p:panelGrid>
                             </p:commandLink>

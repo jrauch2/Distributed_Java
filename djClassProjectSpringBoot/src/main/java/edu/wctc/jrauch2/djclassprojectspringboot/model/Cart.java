@@ -11,6 +11,8 @@ public class Cart implements Serializable {
     private int numberOfItemsInCart;
     private List<Product> keyList;
     private double subtotal;
+    //TODO figure out how to impliment tax
+    private double taxRate = 5.9;
 
     public Cart() {
         contents = new HashMap<>();
@@ -38,12 +40,13 @@ public class Cart implements Serializable {
         if (product == null) {
             throw new NullPointerException();
         }
-        Object productFound = contents.get(product);
-        if (productFound == null) {
-            contents.put(product, 1);
+//        Object productFound = contents.get(product);
+        
+        if (contents.containsKey(product)) {
+            contents.put(product, contents.get(product) + 1);
         }
         else {
-            contents.put(product, contents.get(product) + 1);
+            contents.put(product, 1);
         }
         updateKeyList();
     }
@@ -70,5 +73,21 @@ public class Cart implements Serializable {
     
     private void updateKeyList() {
         keyList = new ArrayList<>(contents.keySet());
+    }
+    
+    public double getTaxRate() {
+        return taxRate;
+    }
+
+    public void setTaxRate(double taxRate) {
+        this.taxRate = taxRate;
+    }
+
+    public double getTax() {
+        return subtotal * (taxRate / 100);
+    }
+    
+    public double getTotal() {
+        return subtotal + getTax();
     }
 }

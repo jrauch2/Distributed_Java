@@ -1,6 +1,7 @@
 package edu.wctc.jrauch2.djclassprojectspringboot.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -284,5 +285,25 @@ public class Product implements Serializable {
      */
     public double discountedRetail() {
         return (retail - (retail * (discount / 100)));
+    }
+    
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
+        if (!(o instanceof Product)) {
+            return false;
+        }
+        Product p = (Product) o;
+        
+        return p.getProductID().equals(productID);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 59 * hash + Objects.hashCode(this.productID);
+        return hash;
     }
 }

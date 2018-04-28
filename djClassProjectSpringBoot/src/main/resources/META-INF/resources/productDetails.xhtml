@@ -10,8 +10,8 @@
             <f:facet name="first">
                 <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
                 <title><h:outputText value="BSC: #{productBean.PRODUCT_SERVICE.getProduct(param['id']).name}"/></title>
-                <h:outputStylesheet name="/css/byron_supply_company.css"/>
-                <h:outputStylesheet name="/css/productDetails.css"/>
+                <link href="byron_supply_company.css" rel="stylesheet"/>
+                <link href="productDetails.css" rel="stylesheet"/>
             </f:facet>
         </h:head>
 
@@ -40,12 +40,9 @@
                             
                             <c:set var="product" value="#{productBean.PRODUCT_SERVICE.getProduct(param['id'])}"/>
                             <f:passThroughAttribute name="product" value="#{productBean.PRODUCT_SERVICE.getProduct(param['id'])}"/>
-                            <h:graphicImage name="#{product.image}" class="img"/>
+                            <img src="#{product.image}" class=""img/>
                             <h:outputText value="#{product.name}" class="productName"/>
-                            <div class="longDescription"><h:outputText value="#{product.longDescription}"/></div>
-                                     
-                                             
-                            
+                            <div class="longDescription"><h:outputText value="#{product.longDescription}"/></div> 
                         </h:form>
                     </div>
                 </div>

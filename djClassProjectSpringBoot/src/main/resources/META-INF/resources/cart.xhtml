@@ -7,12 +7,12 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>BSC: Cart</title>
-        <h:outputStylesheet name="/css/byron_supply_company.css"/>
-        <h:outputStylesheet name="/css/cart.css"/>
+        <link href="byron_supply_company.css" rel="stylesheet"/>
+                <link href="cart.css" rel="stylesheet"/>
     </h:head>
     <h:body>
         <nav>
-            <h:link value="Home" class="nav"/>
+            <h:link value="Home" outcome="index" class="nav"/>
             <h:link value="Products" outcome="products" class="nav"/>
             <div id="navHeader">Byron Supply Company</div>
             <div id="navHeaderSmall">BSC</div>
@@ -41,23 +41,23 @@
                             </p:inputText>
                         </h:column> 
                         <h:column> 
-                            <h:graphicImage name="#{key.image}" class="cartProductImage"/>
+                            <img src="#{key.image}" class="cartProductImage"/>
                         </h:column>
                         <h:column> 
                             #{key.name}
                         </h:column>
                         <h:column>
-                            <h:outputText id="lineTotal" value="$#{key.retail * cartBean.contents.get(key)}">
-                                <f:convertNumber minFractionDigits="2"/>
+                            <h:outputText id="lineTotal" value="#{key.retail * cartBean.contents.get(key)}">
+                                <f:convertNumber currencySymbol="$" type="currency"/>
                             </h:outputText>
                         </h:column>
                     </h:dataTable>
                 </div>
 
                 <div id="cartOrderTotals">
-                    Subtotal: $<span id="subtotal"><h:outputText value="#{cartBean.cart.subtotal}"/></span><br/>
-                    Tax (<span id="taxRate">0.0</span>%): $<span id="taxTotal"><h:outputText value="#{cart.tax}"/></span><br/>
-                    Total: $<span id="total"><h:outputText value="#{cart.grandTotal}"/></span>
+                    Subtotal: <span id="subtotal"><h:outputText value="#{cartBean.cart.subtotal}"><f:convertNumber currencySymbol="$" type="currency"/></h:outputText></span><br/>
+                    Tax (<h:outputText value="#{cartBean.cart.taxRate}"/>%): <h:outputText value="#{cartBean.cart.tax}"><f:convertNumber currencySymbol="$" type="currency"/></h:outputText> <br/>
+                    Total: <h:outputText value="#{cartBean.cart.total}"><f:convertNumber currencySymbol="$" type="currency"/></h:outputText>
                 </div>
                 <div id="buttons">
                     <button id="payNow">Pay Now</button>
