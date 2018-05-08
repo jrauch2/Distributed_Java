@@ -46,7 +46,7 @@ public class PersistenceJDBCConfig {
 	public DataSource dataSource() throws NamingException {
 		BasicDataSource datasource = new BasicDataSource();
 		datasource.setDriverClassName("org.apache.derby.jdbc.ClientDriver");
-		datasource.setUrl("jdbc:derby://localhost:1527/products");
+		datasource.setUrl("jdbc:derby://localhost:1527/product");
 		datasource.setUsername("APP");
 		datasource.setPassword("APP");
 		return datasource;
