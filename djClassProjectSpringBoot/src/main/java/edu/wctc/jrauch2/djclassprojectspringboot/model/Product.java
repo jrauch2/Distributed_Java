@@ -1,5 +1,6 @@
 package edu.wctc.jrauch2.djclassprojectspringboot.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Column;
@@ -8,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer, handler"})
 public class Product implements Serializable {
     
     @Id

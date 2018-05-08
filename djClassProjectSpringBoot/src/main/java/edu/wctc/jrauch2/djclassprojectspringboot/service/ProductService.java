@@ -22,4 +22,16 @@ public class ProductService {
         return productDao.findAll();
     }
     
+    public void updateProduct(Product product) {
+        productDao.save(product);
+    }
+    
+    public void deleteProduct(String productID) {
+        productDao.deleteById(productID);
+    }
+    
+    public void createProduct(Product product) {
+        productDao.save(product);
+    }
+    
 }
